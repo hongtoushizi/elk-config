@@ -1,0 +1,63 @@
+input {
+    file {
+        path => "/var/log/messages"
+        type => "system"
+        start_position => "beginning"
+    }
+    file {
+        path => "/var/log/nginx/access.log"
+        start_position => "beginning"
+        type => "nginx-log"
+    }
+    file {
+        path => "/var/log/elasticsearch/chuck-cluster.log"
+        type => "es-error"
+        start_position => "beginning"
+        codec => multiline {
+            pattern => "^\["
+            negate => true
+            what => "previous"
+        }
+    }
+    rabbitmq {
+        host => "10.10.10.28"
+        queue => "logstash-queue"
+        durable => true
+        key => "logstash-key"
+        exchange => "logstash-rabbitmq"
+        threads => 3
+        prefetch_count => 50
+        port => 5672
+    }
+}
+output {
+   stdout { 
+        codec => rubydebug 
+   } 
+   if [type] == "subject-access-log" {
+        elasticsearch {
+            hosts => ["10.10.10.28:9200"]
+            index => "subject-access-log-%{+YYYY.MM.dd}"
+        }
+    }
+   if [type] == "system" {
+        elasticsearch {
+            hosts => ["10.10.10.28:9200"]
+            index => "system-%{+YYYY.MM.dd}"
+        }
+    }
+    if [type] == "es-error" {
+        elasticsearch {
+            hosts => ["10.10.10.28:9200"]
+            index => "es-error-%{+YYYY.MM.dd}"
+        }
+    }
+    if [type] == "nginx-log" {
+        elasticsearch {
+            hosts => ["10.10.10.28:9200"]
+            index => "nginx-log-%{+YYYY.MM.dd}"
+        }
+    }
+
+
+}

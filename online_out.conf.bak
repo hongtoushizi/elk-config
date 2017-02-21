@@ -1,0 +1,22 @@
+input{
+  stdin{
+  }
+}
+output {
+   stdout {
+        codec => rubydebug
+   } 
+   if [type] == "subject-access-log" {
+       rabbitmq {
+           exchange => "logstash-rabbitmq"
+           exchange_type => "direct"
+           key => "logstash-key"
+           host => "10.10.10.28"
+           workers => 4
+           durable => true
+           persistent => true
+           user => "guest"
+           password => "guest"
+       }
+    }
+}

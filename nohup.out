@@ -1,0 +1,125 @@
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:50:36.656Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:50:59.348Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:51:01.922Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:51:35.007Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:51:51.489Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:51:52.287Z"
+}
+{
+    "@timestamp" => "2017-02-21T08:54:11.114Z",
+       "message" => "[2017-02-21 16:54:09,870][INFO ][cluster.metadata         ] [test_all-server] [qgeamowkbrcv] creating index, cause [api], templates [], shards [5]/[1], mappings []",
+      "@version" => "1",
+          "path" => "/var/log/elasticsearch/chuck-cluster.log",
+          "host" => "0.0.0.0",
+          "type" => "es-error"
+}
+{
+    "@timestamp" => "2017-02-21T08:54:11.114Z",
+       "message" => "[2017-02-21 16:54:09,870][INFO ][cluster.metadata         ] [test_all-server] [qgeamowkbrcv] creating index, cause [api], templates [], shards [5]/[1], mappings []",
+      "@version" => "1",
+          "path" => "/var/log/elasticsearch/chuck-cluster.log",
+          "host" => "0.0.0.0",
+          "type" => "es-error"
+}
+{
+    "@timestamp" => "2017-02-21T08:54:13.119Z",
+       "message" => "[2017-02-21 16:54:10,383][INFO ][cluster.metadata         ] [test_all-server] [lrvdhpnycefz] creating index, cause [api], templates [], shards [5]/[1], mappings []",
+      "@version" => "1",
+          "path" => "/var/log/elasticsearch/chuck-cluster.log",
+          "host" => "0.0.0.0",
+          "type" => "es-error"
+}
+{
+    "@timestamp" => "2017-02-21T08:54:13.119Z",
+       "message" => "[2017-02-21 16:54:10,383][INFO ][cluster.metadata         ] [test_all-server] [lrvdhpnycefz] creating index, cause [api], templates [], shards [5]/[1], mappings []",
+      "@version" => "1",
+          "path" => "/var/log/elasticsearch/chuck-cluster.log",
+          "host" => "0.0.0.0",
+          "type" => "es-error"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:55:07.561Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:55:19.517Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:55:34.639Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:55:35.398Z"
+}
+{
+       "message" => "Hello World!",
+          "path" => "rabbitmq消息中心",
+          "host" => "127.0.0.1",
+          "type" => "subject-access-log",
+      "@version" => "1",
+    "@timestamp" => "2017-02-21T08:55:36.112Z"
+}
+{:timestamp=>"2017-02-21T17:03:23.379000+0800", :message=>"SIGTERM received. Shutting down the pipeline.", :level=>:warn}
+{:timestamp=>"2017-02-21T17:03:26.899000+0800", :message=>"SIGTERM received. Shutting down the pipeline.", :level=>:warn}
+{:timestamp=>"2017-02-21T17:03:26.903000+0800", :message=>"Queue subscription ended! Will retry in 5s", :config=>{"host"=>"10.10.10.62", "queue"=>"logstash-queue", "durable"=>true, "key"=>"logstash-key", "exchange"=>"logstash-rabbitmq", "threads"=>3, "prefetch_count"=>50, "port"=>5672, "user"=>"admin", "password"=><password>, "debug"=>false, "codec"=><LogStash::Codecs::JSON charset=>"UTF-8">, "add_field"=>{}, "vhost"=>"/", "ssl"=>false, "verify_ssl"=>false, "automatic_recovery"=>true, "connect_retry_interval"=>1, "passive"=>false, "arguments"=>{}, "auto_delete"=>false, "exclusive"=>false, "ack"=>true, "subscription_retry_interval_seconds"=>5}, :level=>:warn}
+{:timestamp=>"2017-02-21T17:03:26.915000+0800", :message=>"Queue subscription ended! Will retry in 5s", :config=>{"host"=>"10.10.10.62", "queue"=>"logstash-queue", "durable"=>true, "key"=>"logstash-key", "exchange"=>"logstash-rabbitmq", "threads"=>3, "prefetch_count"=>50, "port"=>5672, "user"=>"admin", "password"=><password>, "debug"=>false, "codec"=><LogStash::Codecs::JSON charset=>"UTF-8">, "add_field"=>{}, "vhost"=>"/", "ssl"=>false, "verify_ssl"=>false, "automatic_recovery"=>true, "connect_retry_interval"=>1, "passive"=>false, "arguments"=>{}, "auto_delete"=>false, "exclusive"=>false, "ack"=>true, "subscription_retry_interval_seconds"=>5}, :level=>:warn}
+{:timestamp=>"2017-02-21T17:03:26.919000+0800", :message=>"Queue subscription ended! Will retry in 5s", :config=>{"host"=>"10.10.10.62", "queue"=>"logstash-queue", "durable"=>true, "key"=>"logstash-key", "exchange"=>"logstash-rabbitmq", "threads"=>3, "prefetch_count"=>50, "port"=>5672, "user"=>"admin", "password"=><password>, "debug"=>false, "codec"=><LogStash::Codecs::JSON charset=>"UTF-8">, "add_field"=>{}, "vhost"=>"/", "ssl"=>false, "verify_ssl"=>false, "automatic_recovery"=>true, "connect_retry_interval"=>1, "passive"=>false, "arguments"=>{}, "auto_delete"=>false, "exclusive"=>false, "ack"=>true, "subscription_retry_interval_seconds"=>5}, :level=>:warn}

@@ -1,0 +1,32 @@
+input {
+    rabbitmq {
+        host => "192.168.199.90"
+        queue => "logstash-queue"
+        durable => true
+        key => "logstash-key"
+        exchange => "logstash-rabbitmq"
+        threads => 3
+        prefetch_count => 50
+        port => 5672
+    }
+}
+output {
+    if [type] == "system" {
+        elasticsearch {
+            hosts => ["192.168.199.90:9200"]
+            index => "system-%{+YYYY.MM.dd}"
+        }
+    }
+    if [type] == "es-error" {
+        elasticsearch {
+            hosts => ["192.168.199.90:9200"]
+            index => "es-error-%{+YYYY.MM.dd}"
+        }
+    }
+    if [type] == "nginx-log" {
+        elasticsearch {
+            hosts => ["192.168.199.90:9200"]
+            index => "nginx-log-%{+YYYY.MM.dd}"
+        }
+    }
+}
